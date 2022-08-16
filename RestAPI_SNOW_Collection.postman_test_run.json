@@ -1,0 +1,197 @@
+{
+	"id": "c24bf6d7-e6a5-4d56-9723-cc8143ae0048",
+	"name": "RestAPI_SNOW_Collection",
+	"timestamp": "2022-08-14T16:13:40.950Z",
+	"collection_id": "5232817-aa014480-2d06-4e73-9cbc-71c06061a88f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 9,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "72393410-0e42-417f-bbaa-b40f3e39e614",
+			"name": "REST_SNow_CreateIncident",
+			"url": "https://dev131709.service-now.com/api/now/table/incident",
+			"time": 148,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Body matches Inquiry": true,
+				"Body matches number": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches Inquiry": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Body matches Inquiry": true,
+					"Body matches number": true
+				}
+			]
+		},
+		{
+			"id": "fdaf5745-4291-4fec-840c-6984fdb4ad3b",
+			"name": "REST_SNow_GetIncident",
+			"url": "https://dev131709.service-now.com/api/now/table/incident/d7805e3997551110a871bfb6f053af70",
+			"time": 109,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				109
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "6bdb46ec-527e-4935-bcd8-17689200d89e",
+			"name": "REST_SNOW_UpdateIncident",
+			"url": "https://dev131709.service-now.com/api/now/table/incident/d7805e3997551110a871bfb6f053af70",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate Incident Sate Name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Incident Sate Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate Incident Sate Name": true
+				}
+			]
+		},
+		{
+			"id": "ad8e0b2d-1029-45ba-aad6-5751ba279564",
+			"name": "REST_SNOW_DeleteIncident",
+			"url": "https://dev131709.service-now.com/api/now/table/incident/d7805e3997551110a871bfb6f053af70",
+			"time": 151,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "7eeb6913-99b8-4a73-8774-57cd2712d306",
+			"name": "REST_SNow_ValidateDeletedIncient",
+			"url": "https://dev131709.service-now.com/api/now/table/incident/d7805e3997551110a871bfb6f053af70",
+			"time": 101,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 676,
+	"collection": {
+		"requests": [
+			{
+				"id": "72393410-0e42-417f-bbaa-b40f3e39e614",
+				"method": "POST"
+			},
+			{
+				"id": "fdaf5745-4291-4fec-840c-6984fdb4ad3b",
+				"method": "GET"
+			},
+			{
+				"id": "6bdb46ec-527e-4935-bcd8-17689200d89e",
+				"method": "PUT"
+			},
+			{
+				"id": "ad8e0b2d-1029-45ba-aad6-5751ba279564",
+				"method": "DELETE"
+			},
+			{
+				"id": "7eeb6913-99b8-4a73-8774-57cd2712d306",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "aa014480-2d06-4e73-9cbc-71c06061a88f",
+		"name": "RestAPI_SNOW_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5232817"
+	},
+	"item": [
+		{
+			"name": "REST_SNow_CreateIncident",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches Inquiry\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"inquiry\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches number\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"number\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "abQJKctlE4qSF-8=",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-UserToken",
+						"value": "7b28b83597111110a871bfb6f053af3f94cd8eabccaf324f5720ecbc684ddbc06efaa643",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"short_description\":\"Windows server not able to Login\",\"description\":\"Windows Server-10.12.13.14. is not able to login\"}"
+				},
+				"url": {
+					"raw": "https://dev131709.service-now.com/api/now/table/incident",
+					"protocol": "https",
+					"host": [
+						"dev131709",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST_SNow_GetIncident",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"task_effective_number\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "abQJKctlE4qSF-8=",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-UserToken",
+						"value": "7b28b83597111110a871bfb6f053af3f94cd8eabccaf324f5720ecbc684ddbc06efaa643",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dev131709.service-now.com/api/now/table/incident/6be445fd97111110a871bfb6f053af07",
+					"protocol": "https",
+					"host": [
+						"dev131709",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"6be445fd97111110a871bfb6f053af07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "karthiRequest",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "bj/3iUh^LY4L",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\":\"skype not wokring\",\"short_description\":\"skype not wokring\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev75644.service-now.com/api/now/table/incident",
+					"protocol": "https",
+					"host": [
+						"dev75644",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "abQJKctlE4qSF-8=",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
